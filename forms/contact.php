@@ -1,4 +1,22 @@
 <?php
+  if(isset($_POST['Submit']))
+  {
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $mailFrom = $_POST['email'];
+    $message = $_POST['message'];
+
+    $mailTo = 'Castagnola.nicolas@gmail.com';
+    $headers = "From" .$mailFrom;
+    $text = $_POST[''];
+
+    mail($mailTo, $subject, $headers, $text);
+
+  }
+
+
+
+  /*
   $receiving_email_address = 'Castagnola.nicolas@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
@@ -16,18 +34,17 @@
   $contact->subject = $_POST['subject'];
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
   $contact->smtp = array(
     'host' => 'example.com',
     'username' => 'example',
     'password' => 'pass',
     'port' => '587'
   );
-  */
-
+  
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
-
+  
   echo $contact->send();
+  */
 ?>
