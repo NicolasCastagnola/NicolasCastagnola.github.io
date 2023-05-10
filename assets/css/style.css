@@ -50,6 +50,21 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 
+.itchio {
+  display: inline-block;
+  width: 20px; /* set the size you want */
+  height: 20px;
+  opacity: 0.65;
+  background-image: url('../img/itch-io.svg');
+  background-size: cover; /* scale the image to fit the container */
+}
+
+/* optional: add a hover effect */
+.itchio:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
 .back-to-top:hover {
   background: #0678e3;
   color: #fff;
